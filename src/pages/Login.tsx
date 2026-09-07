@@ -57,14 +57,14 @@ export default function Login() {
         <div className="grid w-full max-w-4xl overflow-hidden rounded-lg border border-white/10 bg-void-800 shadow-deep lg:grid-cols-2">
           <div className="hidden bg-void-700 lg:block">
             <img
-              src="/assets/img/eclipse-das-almas.svg"
+              src="/assets/img/eclipse-das-almas.png"
               alt="Arte do jogo Eclipse das Almas"
               className="h-full w-full object-cover"
             />
           </div>
 
           <div className="flex flex-col items-center px-6 py-10 sm:px-10">
-            <img src="/assets/img/logo.svg" alt="Guerreiros Play" className="h-16 w-auto" />
+            <img src="/assets/img/logo.png" alt="Guerreiros Play" className="h-16 w-auto" />
             <h1 className="mt-4 text-center text-3xl font-bold uppercase tracking-wide text-bone-100">
               Login
             </h1>

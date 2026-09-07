@@ -13,7 +13,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-40 border-b border-white/10 bg-void-900/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
         <Link to="/" className="flex items-center gap-2">
-          <img src="/assets/img/logo.svg" alt="Guerreiros Play" className="h-9 w-auto" />
+          <img src="/assets/img/logo.png" alt="Guerreiros Play" className="h-9 w-auto" />
           <span className="font-display text-lg text-bone-100">Guerreiros Play</span>
         </Link>
 

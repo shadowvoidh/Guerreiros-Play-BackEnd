@@ -6,8 +6,8 @@ export const games: Game[] = [
     title: "Guerreiros Play: Ultimate Fight",
     category: "Luta",
     price: 89.9,
-    coverImage: "/assets/img/ultimate-fight.svg",
-    bannerImage: "/assets/img/ultimate-fight.svg",
+    coverImage: "/assets/img/ultimate-fight.png",
+    bannerImage: "/assets/img/ultimate-fight.png",
     shortDescription:
       "Um jogo de luta competitivo onde os maiores guerreiros de diferentes eras se enfrentam pelo título de campeão da Arena Suprema.",
     longDescription: [
@@ -20,8 +20,8 @@ export const games: Game[] = [
     title: "Guerreiros Play: Eclipse das Almas",
     category: "Aventura",
     price: 74.9,
-    coverImage: "/assets/img/eclipse-das-almas.svg",
-    bannerImage: "/assets/img/eclipse-das-almas.svg",
+    coverImage: "/assets/img/eclipse-das-almas.png",
+    bannerImage: "/assets/img/eclipse-das-almas.png",
     shortDescription:
       "Quando o Eclipse Carmesim cobriu os céus, reis enlouqueceram e heróis foram corrompidos. Restaure a luz ao mundo de Valdrath.",
     longDescription: [
@@ -35,8 +35,8 @@ export const games: Game[] = [
     title: "Guerreiros Play: Fúria do Dragão",
     category: "Ação",
     price: 69.9,
-    coverImage: "/assets/img/furia-do-dragao.svg",
-    bannerImage: "/assets/img/furia-do-dragao.svg",
+    coverImage: "/assets/img/furia-do-dragao.png",
+    bannerImage: "/assets/img/furia-do-dragao.png",
     shortDescription:
       "Um jogo de ação frenético em terceira pessoa: incorpore um caçador de dragões e enfrente hordas de criaturas em cenários devastados.",
     longDescription: [
@@ -49,8 +49,8 @@ export const games: Game[] = [
     title: "Guerreiros Play: Reino Partido",
     category: "Estratégia",
     price: 59.9,
-    coverImage: "/assets/img/reino-partido.svg",
-    bannerImage: "/assets/img/reino-partido.svg",
+    coverImage: "/assets/img/reino-partido.png",
+    bannerImage: "/assets/img/reino-partido.png",
     shortDescription:
       "Duas facções, um único trono. Recrute guerreiros, planeje batalhas em turnos e decida o destino do Reino Partido.",
     longDescription: [
