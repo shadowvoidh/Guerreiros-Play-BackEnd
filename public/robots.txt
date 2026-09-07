@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /login
+Disallow: /cadastro
+
+Sitemap: https://guerreirosplay.example.com/sitemap.xml

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <defs>
+    <radialGradient id="g2" cx="70%" cy="25%" r="60%">
+      <stop offset="0%" stop-color="#8a2be2" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#0a0a0c" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="640" height="360" fill="#0a0a0c"/>
+  <rect width="640" height="360" fill="url(#g2)"/>
+  <circle cx="460" cy="90" r="46" fill="#ff0020"/>
+  <circle cx="474" cy="82" r="46" fill="#0a0a0c"/>
+  <path d="M60 340 L220 200 L300 260 L420 160 L580 340 Z" fill="#12110f"/>
+  <text x="320" y="300" font-family="Playfair Display, serif" font-size="30" fill="#f2f0eb" text-anchor="middle" letter-spacing="4">ECLIPSE DAS ALMAS</text>
+</svg>

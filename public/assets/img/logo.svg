@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="120" viewBox="0 0 200 120">
+  <circle cx="100" cy="46" r="26" fill="#ff0020"/>
+  <circle cx="108" cy="42" r="26" fill="#0b0b0a"/>
+  <path d="M40 108 L100 55 M160 108 L100 55" stroke="#c9a227" stroke-width="5" stroke-linecap="round"/>
+  <text x="100" y="112" font-family="Playfair Display, serif" font-size="14" fill="#f2f0eb" text-anchor="middle" letter-spacing="2">GUERREIROS</text>
+</svg>

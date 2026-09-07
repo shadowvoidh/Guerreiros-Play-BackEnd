@@ -3,151 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="assets/styles.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=JetBrains+Mono&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <title>Guerreiros Play</title>
-     <link rel="icon" type="image/x-icon" href="assets/img/logo.png">
+
+    <!--
+      Content-Security-Policy delivered via <meta> as a defense-in-depth layer.
+      The AUTHORITATIVE copy of this policy must also be sent as a real HTTP
+      response header by the server/CDN (see netlify.toml / SECURITY.md) —
+      a meta tag cannot set frame-ancestors, cannot block some header-only
+      attacks, and is not a substitute for the HTTP header.
+    -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';"
+    />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <title>Guerreiros Play — Catálogo de jogos de luta e ação</title>
+    <meta
+      name="description"
+      content="Guerreiros Play é o catálogo escolar de jogos de luta e ação: conheça Ultimate Fight, Eclipse das Almas e outros títulos, com fotos, descrição e preço."
+    />
+    <link rel="canonical" href="https://guerreirosplay.example.com/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Guerreiros Play" />
+    <meta property="og:title" content="Guerreiros Play — Catálogo de jogos de luta e ação" />
+    <meta
+      property="og:description"
+      content="Catálogo escolar de jogos de luta e ação com fotos, descrição e preço de cada título."
+    />
+    <meta property="og:image" content="/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#0b0b0a" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-<!-- @Shadow_Voidh -->
-
-<div class="figma-layout-container">
-
-  <section class="tela-card" id="tela-login">
-    <div class="pc-banner-side">
-      <img src="assets/img/Eclipse.png" alt="Banner Guerreiros">
-    </div>
-
-    <div class="interface-side">
-      <div class="logo-wrapper">
-        <img src="assets/img/logo.png" alt="Guerreiros Play" class="logo-game">
-      </div>
-      <h1 class="titulo-tela">LOGIN</h1>
-      <form class="form-interface" onsubmit="realizarLogin(event)">
-        <div class="input-group">
-          <span class="input-icon">✉</span>
-          <input type="email" placeholder="Exemplo@gmail.com" required>
-        </div>
-        <div class="input-group">
-          <span class="input-icon">🔒</span>
-          <input type="password" placeholder="Senha" required>
-        </div>
-        <a href="#" class="link-esqueceu system-text">Esqueci a senha</a>
-        <button class="btn-login" type="submit">LOGIN</button>
-      </form>
-      <div class="card-footer">
-        <p class="system-text">Não possui conta? <a href="#" class="link-alternativo" onclick="event.preventDefault(); mudarTela('tela-cadastro')">Cadastre-se</a></p>
-      </div>
-    </div>
-  </section>
-
-  <section class="tela-card hidden" id="tela-cadastro">
-    <div class="pc-banner-side">
-      <img src="assets/img/UltimateFight.png" alt="Banner Guerreiros">
-    </div>
-
-    <div class="interface-side">
-      <div class="logo-wrapper">
-        <img src="assets/img/logo.png" alt="Guerreiros Play" class="logo-game">
-      </div>
-      <h1 class="titulo-tela">Cadastro</h1>
-      <form class="form-interface" onsubmit="realizarCadastro(event)">
-        <div class="input-group">
-          <span class="input-icon">👤</span>
-          <input type="text" placeholder="Nome de Usuário" required>
-        </div>
-        <div class="input-group">
-          <span class="input-icon">✉</span>
-          <input type="email" placeholder="Email" required>
-        </div>
-        <div class="input-group">
-          <span class="input-icon">🔒</span>
-          <input type="password" placeholder="Senha" required>
-        </div>
-        <button class="btn-login" type="submit">CADASTRO</button>
-      </form>
-      <div class="card-footer">
-        <p class="system-text">Possui conta? <a href="#" class="link-alternativo" onclick="event.preventDefault(); mudarTela('tela-login')">Login</a></p>
-      </div>
-    </div>
-  </section>
-
-  <section class="tela-card loja-card hidden" id="tela-loja">
-    <header class="loja-header">
-      <img src="assets/img/logo.png" alt="Mini Logo" class="mini-logo">
-      <h1 class="titulo-loja">LOJA</h1>
-    </header>
-    <div class="loja-produtos">
-      <div class="produto-item">
-        <span class="produto-tag system-text">Guerreiros Play: Ultimate Fight</span>
-        <div class="img-container">
-          <img src="assets/img/UltimateFight.png" class="img-produto">
-        </div>
-        <button class="btn-login btn-acessar" onclick="mudarTela('tela-ultimate')">Acessar</button>
-      </div>
-      <div class="produto-item">
-        <span class="produto-tag system-text">Guerreiros Play: Eclipse das Almas</span>
-        <div class="img-container">
-          <img src="assets/img/Eclipse.png" class="img-produto">
-        </div>
-        <button class="btn-login btn-acessar" onclick="mudarTela('tela-eclipse')">Acessar</button>
-      </div>
-    </div>
-    <div class="card-footer">
-      <a href="#" class="link-alternativo" onclick="event.preventDefault(); mudarTela('tela-login')">Sair / Voltar</a>
-    </div>
-  </section>
-
-  <section class="tela-card hidden" id="tela-ultimate">
-    <div class="pc-banner-side">
-      <img src="assets/img/UltimateFight.png" alt="Ultimate Fight Banner">
-    </div>
-    <div class="conteudo-jogo-detalhes">
-      <h2 class="titulo-jogo-detalhe">Guerreiros Play: Ultimate Fight</h2>
-      <div class="descricao-container">
-        <p class="texto-descricao figma-vermelho">
-          Guerreiros Play: Ultimate Fight é um jogo de luta competitivo onde os maiores guerreiros de diferentes eras, reinos e dimensões se enfrentam para provar quem é o verdadeiro campeão da Arena Suprema.
-        </p>
-        <p class="texto-descricao figma-azul">
-          Domine estilos de combate únicos, execute combos devastadores e desperte habilidades especiais capazes de virar uma luta nos momentos mais críticos. Cada personagem possui uma história própria, golpes exclusivos e um poderoso golpe final conhecido como Ultimate Impact.
-        </p>
-      </div>
-      <div class="botoes-detalhe-container">
-        <button class="btn-login btn-ver-mais">Ver mais</button>
-      </div>
-      <div class="card-footer-detalhes">
-        <a href="#" class="link-alternativo" onclick="event.preventDefault(); mudarTela('tela-loja')">Voltar para Loja</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="tela-card hidden" id="tela-eclipse">
-    <div class="pc-banner-side">
-      <img src="assets/img/Eclipse.png" alt="Eclipse das Almas Banner">
-    </div>
-    <div class="conteudo-jogo-detalhes">
-      <h2 class="titulo-jogo-detalhe">Guerreiros Play: Eclipse das Almas</h2>
-      <div class="descricao-container">
-        <p class="texto-descricao figma-cinza">
-          GUERREIROS PLAY: ECLIPSE DAS ALMAS<br><br>
-          Quando o Eclipse Carmesim cobriu os céus, o equilíbrio do mundo foi destruído. Reis enlouqueceram, heróis foram corrompidos e criaturas ancestrais despertaram das profundezas da escuridão. O reino de Valdrath caiu, deixando para trás apenas ruínas, cinzas e almas condenadas.
-        </p>
-        <p class="texto-descricao figma-laranja">
-          Você é um dos últimos Guerreiros da Chama, um combatente marcado pelo eclipse e destinado a enfrentar os Senhores das Almas, seres poderosos que governam as terras devastadas. Para restaurar a luz ao mundo, será necessário atravessar castelos esquecidos, cemitérios amaldiçoados, cidades destruídas e fortalezas dominadas pela corrupção.
-        </p>
-        <p class="texto-descricao figma-laranja">
-          Cada vitória o tornará mais forte, mas cada derrota o aproximará da loucura. Em um mundo onde a morte é apenas mais um obstáculo, somente os verdadeiros guerreiros conseguirão sobreviver aos horrores do Eclipse.
-        </p>
-      </div>
-      <div class="botoes-detalhe-container">
-        <button class="btn-login btn-ver-mais">Ver mais</button>
-      </div>
-      <div class="card-footer-detalhes">
-        <a href="#" class="link-alternativo" onclick="event.preventDefault(); mudarTela('tela-loja')">Voltar para Loja</a>
-      </div>
-    </div>
-  </section>
-
-</div>
-
-    <script src="dashboard/main.js"></script>
+  <body class="bg-void-950 text-bone-100">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

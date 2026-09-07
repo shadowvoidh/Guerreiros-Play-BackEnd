@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #050505;
+    background-image: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 79px,
+        rgba(102, 10, 10, 0.35) 80px
+      ),
+      repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(102, 10, 10, 0.35) 80px),
+      linear-gradient(135deg, #0f0f11 0%, #1a1a1e 50%, #0a0a0c 100%);
+    background-attachment: fixed;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+  }
+
+  /* Bloqueia o arrasto e a seleção de imagens no site todo */
+  img {
+    -webkit-user-drag: none;
+    user-drag: none;
+    @apply select-none;
+  }
+
+  /* Visible keyboard focus for accessibility on every interactive element */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline: 2px solid theme("colors.gold.400");
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: rgba(201, 162, 39, 0.25);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

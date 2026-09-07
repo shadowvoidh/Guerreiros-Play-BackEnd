@@ -1,0 +1,16 @@
+{
+  "name": "Guerreiros Play",
+  "short_name": "GuerreirosPlay",
+  "description": "Catálogo escolar de jogos de luta e ação.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b0b0a",
+  "theme_color": "#0b0b0a",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
